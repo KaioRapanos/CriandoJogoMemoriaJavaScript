@@ -5,7 +5,7 @@ body{
     min-height: 100vh;
     background-image: url(../images/vecteezy_landscape-scene-silhouette-with-medieval-town_6591044.jpg);
     background-size: cover;
-    
+    user-select: none;
 }
 
 .container{
@@ -63,4 +63,29 @@ h2{
     align-items: center;
     justify-content: center;
     background-color: #fff;
+
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: 0.70s;
+}
+
+.item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #404040;
+    opacity: 0.85;
+    transition: 0.50s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.item.boxOpen{
+    transform: rotateY(0deg);
+
+}
+
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
 }
