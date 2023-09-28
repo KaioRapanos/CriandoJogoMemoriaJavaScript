@@ -15,7 +15,8 @@ body{
     justify-content: center;
     align-items: center;
     gap: 30px;
-    /* background-color: linear-gradient(325dg,#03001e 0%,#7303c0 30%,#ec38cb 70%,#fdeff9 100%); */
+    background: rgb(2,0,36);
+    background: linear-gradient(325deg, rgba(2,0,36,1) 0%, rgba(37,158,120,1) 31%, rgba(9,121,81,1) 35%, rgba(8,134,105,1) 44%, rgba(7,147,129,1) 53%, rgba(4,175,183,1) 73%, rgba(0,212,255,1) 100%);
     padding: 40px 60px;
 }
 
@@ -74,7 +75,7 @@ h2{
     position: absolute;
     inset: 0;
     background: #404040;
-    opacity: 0.85;
+    /* opacity: 0.85; */
     transition: 0.50s;
     transform: rotateY(0deg);
     backface-visibility: hidden;

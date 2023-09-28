@@ -19,9 +19,7 @@ const emojis = [
 
 let openCards = [];
 
-let shuffleEmojis = emojis.sort(()=> {
-    (Math.random() < 0.5 ? 2 : -1)
-});
+let shuffleEmojis = emojis.sort(()=> Math.random() - 0.5 );
 
 for (let i = 0; i < emojis.length; i++) {
     let box = document.createElement("div");
@@ -32,6 +30,7 @@ for (let i = 0; i < emojis.length; i++) {
 }
 
 function handleClick(){
+    playSound("click")
     if(openCards.length < 2){
         this.classList.add("boxOpen");
         openCards.push(this);
@@ -56,3 +55,10 @@ function checkMatch(){
         alert("Você Venceu!!")
     }
 }
+
+function playSound(audioName){
+    let audio = new Audio(`./src/audios/${audioName}.mp3`);
+    audio.volume = 0.2;
+    audio.play();
+}
+playSound("sound");
